@@ -1,4 +1,4 @@
-package state_master;
+package state_master.ThirdTest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ThirdTestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(state_master.Country_ThirdTestApplication.class, args);
+		SpringApplication.run(ThirdTestApplication.class, args);
 	}
 
 }
-

@@ -10,7 +10,7 @@ import java.util.List;
 
 //Controller Class
 @RestController
-public class Controller {
+public class Country_Controller {
 	
 	@Autowired
 	private state_master.ThirdTest.service.Country_service Country_service;

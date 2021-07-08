@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Model {
+public class Country_Model {
 	
 	@Id
 	private long id;
@@ -13,7 +13,7 @@ public class Model {
 	private String country_description;
 	private String country_status;
 	
-	public Model(String country_name, String country_code, String country_description, long id, String country_status) {
+	public Country_Model(String country_name, String country_code, String country_description, long id, String country_status) {
 		super();
 		this.country_name = country_name;
 		this.country_code = country_code;
@@ -22,7 +22,7 @@ public class Model {
 		this.country_status = country_status;
 	}
 	
-	public Model() {
+	public Country_Model() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
