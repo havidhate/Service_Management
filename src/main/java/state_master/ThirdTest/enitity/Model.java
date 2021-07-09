@@ -4,75 +4,64 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Model {
-	
+public class  Model {
+
 	@Id
-	private long contactNo;
-	private String emailId;
-	private String fname;
-	private String lname;
-	private String city;
-	private String password;
-	
-	public Model(String emailId, String fname, String lname, long contactNo, String city,String password) {
-		super();
-		this.emailId = emailId;
-		this.fname = fname;
-		this.lname = lname;
-		this.contactNo = contactNo;
-		this.city = city;
-		this.password = password;
-	}
-	
-	public Model() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public long getContactNo() {
-		return contactNo;
-	}
-	public void setContactNo(long contactNo) {
-		this.contactNo = contactNo;
-	}
-	
-	public String getEmailId() {
-		return emailId;
-	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-	public String getFname() {
-		return fname;
-	}
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
-	public String getLname() {
-		return lname;
-	}
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
-	
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	private long id;
+	private String state_name;
+	private String state_code;
+	private String state_description;
+	private Character active_status;
+
+	public Model(long id, String state_name, String state_code, String state_description, Character active_status) {
+		this.id = id;
+		this.state_name = state_name;
+		this.state_code = state_code;
+		this.state_description = state_description;
+		this.active_status = active_status;
 	}
 
-	@Override
-	public String toString() {
-		return "Model [contactNo=" + contactNo + ", emailId=" + emailId + ", fname=" + fname + ", lname=" + lname
-				+ ", city=" + city + ", password=" + password + "]";
+	public Model() {
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getState_name() {
+		return state_name;
+	}
+
+	public void setState_name(String state_name) {
+		this.state_name = state_name;
+	}
+
+	public String getState_code() {
+		return state_code;
+	}
+
+	public void setState_code(String state_code) {
+		this.state_code = state_code;
+	}
+
+	public String getState_description() {
+		return state_description;
+	}
+
+	public void setState_description(String state_description) {
+		this.state_description = state_description;
+	}
+
+	public Character getActive_status() {
+		return active_status;
+	}
+
+	public void setActive_status(Character active_status) {
+		this.active_status = active_status;
 	}
 
 }
