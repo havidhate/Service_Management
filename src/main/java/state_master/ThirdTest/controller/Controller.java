@@ -26,9 +26,7 @@ public class Controller {
 	
 	@GetMapping("/users")
 	public List<Model> getListModels() {
-		
 		return this.service.getModels();
-		
 	}
 	
 	@PostMapping("/users")
