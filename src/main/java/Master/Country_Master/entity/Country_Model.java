@@ -15,12 +15,7 @@ public class Country_Model {
 	private String country_description;
 	private String active_status;
 
-<<<<<<< HEAD:src/main/java/Master/Country_Master/entity/Country_Model.java
-=======
-	public Country_Model() {
-	}
 
->>>>>>> rollbackBranch:src/main/java/Master/Country_Master/enitity/Country_Model.java
 	public Country_Model(long id, String country_name, String country_code, String country_description, String active_status) {
 		this.id = id;
 		this.country_name = country_name;
@@ -29,12 +24,9 @@ public class Country_Model {
 		this.active_status = active_status;
 	}
 
-<<<<<<< HEAD:src/main/java/Master/Country_Master/entity/Country_Model.java
 	public Country_Model() {
 	}
 
-=======
->>>>>>> rollbackBranch:src/main/java/Master/Country_Master/enitity/Country_Model.java
 	public long getId() {
 		return id;
 	}

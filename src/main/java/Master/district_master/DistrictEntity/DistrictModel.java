@@ -1,4 +1,4 @@
-package Master.district_master.entity;
+package Master.district_master.DistrictEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -3,11 +3,9 @@ package Master.Country_Master.service;
 import java.util.List;
 
 import Master.Country_Master.Dao.Country_Dao;
-<<<<<<< HEAD
+
 import Master.Country_Master.entity.Country_Model;
-=======
-import Master.Country_Model;
->>>>>>> rollbackBranch
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,10 +25,6 @@ public class countryServiceImplementation implements Country_service {
 		return countryDao.findAll();
 	}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> rollbackBranch
 	@Override
 	public Country_Model addCountryModel(Country_Model countryModel) {
 		// TODO Auto-generated method stub

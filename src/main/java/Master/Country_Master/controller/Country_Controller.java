@@ -1,12 +1,11 @@
 package Master.Country_Master.controller;
 
-<<<<<<< HEAD
+
 import Master.Country_Master.entity.Country_Model;
 import Master.Country_Master.service.Country_service;
-=======
+
 import Master.Country_Master.service.Country_service;
-import Master.Country_Model;
->>>>>>> rollbackBranch
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
