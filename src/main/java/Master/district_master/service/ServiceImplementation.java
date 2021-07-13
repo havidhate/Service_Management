@@ -5,11 +5,12 @@ import java.util.List;
 import Master.district_master.entity.DistrictModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import Master.district_master.service.*;
 import Master.district_master.Dao.Dao;
 
-@Service
+@Service()
 public class ServiceImplementation implements Master.district_master.service.Service {
+
     @Autowired
     public Dao dao;
 
