@@ -29,7 +29,7 @@ public class countryServiceImplementation implements service {
 	}
 
 	@Override
-	public Master.state_master.ThirdTest.enitity.Country_Model addModel(Master.state_master.ThirdTest.enitity.Country_Model countryModel) {
+	public Master.state_master.ThirdTest.entity.Country_Model addModel(Master.state_master.ThirdTest.enitity.Country_Model countryModel) {
 		// TODO Auto-generated method stub
 		countryDao.save(countryModel);
 		return countryModel;
