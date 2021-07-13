@@ -2,6 +2,7 @@ package Master.state_master.controller;
 
 import java.util.List;
 
+import Master.state_master.service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,18 +18,18 @@ public class Controller {
 	@Autowired
 	private Master.state_master.service.service service;
 	
-	@GetMapping("/home")
+	@GetMapping("/stateHome")
 	public String home()
 	{
 		return "Welcome to Home Page!!!";
 	}
 	
-	@GetMapping("/stateusers")
+	@GetMapping("/stateUsers")
 	public List<Model> getListModels() {
 		return this.service.getModels();
 	}
 	
-	@PostMapping("/users")
+	@PostMapping("/stateUsers")
 	public Model addModel(@RequestBody Model model) {
 		return this.service.addModel(model);
 	}
