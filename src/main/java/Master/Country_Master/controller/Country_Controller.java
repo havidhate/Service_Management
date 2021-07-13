@@ -1,5 +1,7 @@
-package Master.state_master.ThirdTest.controller;
+package Master.Country_Master.controller;
 
+import Master.Country_Master.service.Country_service;
+import Master.Country_Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,24 +15,24 @@ import java.util.List;
 public class Country_Controller {
 	
 	@Autowired
-	private Master.state_master.ThirdTest.service.Country_service Country_service;
+	private Country_service Country_service;
 	
-	@GetMapping("/home")
+	@GetMapping("/countryHome")
 	public String home()
 	{
 		return "Welcome to Home Page!!!";
 	}
 	
-	@GetMapping("/users")
-	public List<Master.state_master.ThirdTest.enitity.Country_Model> getListModels() {
+	@GetMapping("/countryUsers")
+	public List<Country_Model> getListModels() {
 		
-		return this.Country_service.getModels();
+		return this.Country_service.getCountryModels();
 		
 	}
 	
-	@PostMapping("/users")
-	public Master.state_master.ThirdTest.enitity.Country_Model addModel(@RequestBody Master.state_master.ThirdTest.enitity.Country_Model countryModel) {
-		return this.Country_service.addModel(countryModel);
+	@PostMapping("/countryUsers")
+	public Country_Model addModel(@RequestBody Country_Model countryModel) {
+		return this.Country_service.addCountryModel(countryModel);
 	}
 	
 
