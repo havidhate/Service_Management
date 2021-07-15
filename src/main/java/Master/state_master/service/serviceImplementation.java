@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Master.state_master.Dao.Dao;
-import Master.state_master.entity.Model;
+import Master.state_master.entity.State_Model;
 
 @Service
 public class serviceImplementation implements service {
@@ -19,16 +19,16 @@ public class serviceImplementation implements service {
 	}
 	
 	@Override
-	public List<Model> getModels() {
+	public List<State_Model> getModels() {
 		// TODO Auto-generated method stub
 		return dao.findAll();
 	}
 
 	@Override
-	public Model addModel(Model model) {
+	public State_Model addModel(State_Model stateModel) {
 		// TODO Auto-generated method stub
-		dao.save(model);
-		return model;
+		dao.save(stateModel);
+		return stateModel;
 	}
 
 }

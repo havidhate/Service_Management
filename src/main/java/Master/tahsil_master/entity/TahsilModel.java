@@ -1,15 +1,15 @@
 package Master.tahsil_master.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import Master.district_master.entity.DistrictModel;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.*;
 
 @Entity
 public class TahsilModel {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    private Integer tahsil_id;
 
     private String tahsil_name;
 
@@ -19,12 +19,28 @@ public class TahsilModel {
 
     private Character active_status='Y';
 
-    public Integer getId() {
-        return id;
+    @ManyToOne
+    @JoinColumn(name = "district_id")
+    private DistrictModel districtModel;
+
+    public TahsilModel() {
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public TahsilModel(Integer tahsil_id, String tahsil_name, Integer tahsil_code, String tahsil_description, Character active_status, DistrictModel districtModel) {
+        this.tahsil_id = tahsil_id;
+        this.tahsil_name = tahsil_name;
+        this.tahsil_code = tahsil_code;
+        this.tahsil_description = tahsil_description;
+        this.active_status = active_status;
+        this.districtModel = districtModel;
+    }
+
+    public Integer getTahsil_id() {
+        return tahsil_id;
+    }
+
+    public void setTahsil_id(Integer tahsil_id) {
+        this.tahsil_id = tahsil_id;
     }
 
     public String getTahsil_name() {
@@ -57,5 +73,14 @@ public class TahsilModel {
 
     public void setActive_status(Character active_status) {
         this.active_status = active_status;
+    }
+
+    @JsonBackReference
+    public DistrictModel getDistrictModel() {
+        return districtModel;
+    }
+
+    public void setDistrictModel(DistrictModel districtModel) {
+        this.districtModel = districtModel;
     }
 }

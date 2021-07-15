@@ -38,6 +38,5 @@ public class Country_Controller {
 	public Country_Model addModel(@RequestBody Country_Model countryModel) {
 		return this.Country_service.addCountryModel(countryModel);
 	}
-	
 
 }

@@ -2,14 +2,13 @@ package Master.state_master.controller;
 
 import java.util.List;
 
-import Master.state_master.service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import Master.state_master.entity.Model;
+import Master.state_master.entity.State_Model;
 
 //Controller Class
 @RestController
@@ -25,13 +24,13 @@ public class Controller {
 	}
 	
 	@GetMapping("/stateUsers")
-	public List<Model> getListModels() {
+	public List<State_Model> getListModels() {
 		return this.service.getModels();
 	}
 	
 	@PostMapping("/stateUsers")
-	public Model addModel(@RequestBody Model model) {
-		return this.service.addModel(model);
+	public State_Model addModel(@RequestBody State_Model stateModel) {
+		return this.service.addModel(stateModel);
 	}
 	
 

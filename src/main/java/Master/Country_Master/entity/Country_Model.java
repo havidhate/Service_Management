@@ -1,38 +1,44 @@
 package Master.Country_Master.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import Master.state_master.entity.State_Model;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Country_Model {
 
 	@Id
-	private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer country_id;
 	private String country_name;
 	private String country_code;
 	private String country_description;
 	private String active_status;
 
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "countryModel",fetch = FetchType.LAZY)
+	private List<State_Model> state_models;
 
-	public Country_Model(long id, String country_name, String country_code, String country_description, String active_status) {
-		this.id = id;
-		this.country_name = country_name;
-		this.country_code = country_code;
-		this.country_description = country_description;
-		this.active_status = active_status;
-	}
 
 	public Country_Model() {
 	}
 
-	public long getId() {
-		return id;
+	public Country_Model(Integer country_id, String country_name, String country_code, String country_description, String active_status, List<State_Model> state_models) {
+		this.country_id = country_id;
+		this.country_name = country_name;
+		this.country_code = country_code;
+		this.country_description = country_description;
+		this.active_status = active_status;
+		this.state_models = state_models;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public Integer getCountry_id() {
+		return country_id;
+	}
+
+	public void setCountry_id(Integer country_id) {
+		this.country_id = country_id;
 	}
 
 	public String getCountry_name() {
@@ -67,14 +73,12 @@ public class Country_Model {
 		this.active_status = active_status;
 	}
 
-	@Override
-	public String toString() {
-		return "Country_Model{" +
-				"id=" + id +
-				", country_name='" + country_name + '\'' +
-				", country_code='" + country_code + '\'' +
-				", country_description='" + country_description + '\'' +
-				", active_status='" + active_status + '\'' +
-				'}';
+	@JsonManagedReference
+	public List<State_Model> getState_models() {
+		return state_models;
+	}
+
+	public void setState_models(List<State_Model> state_models) {
+		this.state_models = state_models;
 	}
 }
